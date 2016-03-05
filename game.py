@@ -65,9 +65,9 @@ class Game(object):
             return 'No clear winner'
         else:
             if self.p1.get_card_num() > self.p2.get_card_num():
-                return 'The winner is %s' % self.p1
+                return 'The winner is %s (Player1)' % self.p1
             else:
-                return 'The winner is %s' % self.p2
+                return 'The winner is %s (Player2)' % self.p2
 
 
     def play(self):
@@ -101,7 +101,7 @@ class Game(object):
                 print 'Condition not met! Into the trash it goes...\n\n'
             prev_card = current_card
             print '=============================================\n\n'
-            sleep(0.5)
+            sleep(1)
         
         self.p1.cards, self.p2.cards = p1,p2
 
